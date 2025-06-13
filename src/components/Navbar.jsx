@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { navbarVariants } from '../utils/variants';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -8,6 +9,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', id: 'home' },
+    { name: 'About', id: 'about' },
     { name: 'Skills', id: 'skills' },
     { name: 'Experience', id: 'experience' },
     { name: 'Projects', id: 'projects' },
@@ -53,31 +55,7 @@ const Navbar = () => {
     };
   }, [navLinks]);
 
-  const navbarVariants = {
-    initial: {
-      scale: 1,
-      opacity: 1,
-      y: 0,
-    },
-    scrolled: {
-      scale: [1, 1.01, 1],
-      opacity: [1, 1, 1],
-      y: 0,
-      transition: {
-        duration: 0.3,
-        ease: "easeInOut",
-      }
-    },
-    unscrolled: {
-      scale: [1, 1.01, 1],
-      opacity: [1, 1, 1],
-      y: 0,
-      transition: {
-        duration: 0.3,
-        ease: "easeInOut",
-      }
-    }
-  };
+
 
   return (
     <motion.nav
