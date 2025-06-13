@@ -1,59 +1,7 @@
 import { motion } from 'framer-motion';
-import { IoLanguage } from 'react-icons/io5';
-import { PiDetectiveLight } from 'react-icons/pi';
-import { MdOutlineWeb } from 'react-icons/md';
+import { skillsContainerVariants, skillCardVariants, skillItemTextVariants } from '../utils/variants'; 
+import { skillsData } from '../utils/skills'; 
 
-// Data structure with proficiency
-const skillsData = [
-  {
-    id: 'web-dev',
-    title: 'Web Development',
-    icon: MdOutlineWeb,
-    skills: [
-      { name: 'React.js', percent: 90 },
-      { name: 'Next.js', percent: 85 },
-      { name: 'Node.js', percent: 80 },
-      { name: 'UI/UX', percent: 75 },
-      { name: 'SEO', percent: 70 },
-    ],
-  },
-  {
-    id: 'cyber-sec',
-    title: 'Cybersecurity',
-    icon: PiDetectiveLight,
-    skills: [
-      { name: 'Network Security', percent: 85 },
-      { name: 'Ethical Hacking', percent: 80 },
-      { name: 'Security Engineering', percent: 75 },
-      { name: 'Web Security', percent: 70 },
-    ],
-  },
-  {
-    id: 'languages',
-    title: 'Languages',
-    icon: IoLanguage,
-    skills: [
-      { name: 'Spanish', percent: 100 },
-      { name: 'English', percent: 90 },
-      { name: 'Chinese', percent: 40 },
-    ],
-  },
-];
-
-// Framer Motion variants
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.2, when: 'beforeChildren' },
-  },
-};
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 60 } },
-};
-
-// Circular progress component
 const CircularProgress = ({ percent }) => {
   const radius = 30;
   const stroke = 4;
@@ -64,7 +12,7 @@ const CircularProgress = ({ percent }) => {
   return (
     <svg height={radius * 2} width={radius * 2} className="mx-auto">
       <circle
-        stroke="#E5E7EB"
+        stroke="#4B5563" // Darker gray for the background circle
         fill="transparent"
         strokeWidth={stroke}
         r={normalizedRadius}
@@ -72,7 +20,7 @@ const CircularProgress = ({ percent }) => {
         cy={radius}
       />
       <motion.circle
-        stroke="#8B5CF6"
+        stroke="#8B5CF6" // Your ent color
         fill="transparent"
         strokeWidth={stroke}
         r={normalizedRadius}
@@ -81,15 +29,17 @@ const CircularProgress = ({ percent }) => {
         strokeDasharray={circumference + ' ' + circumference}
         initial={{ strokeDashoffset: circumference }}
         animate={{ strokeDashoffset }}
-        transition={{ duration: 1.2, ease: 'easeInOut' }}
+        transition={{ duration: 1.5, ease: 'easeOut' }} // Slightly longer duration for the fill animation
         strokeLinecap="round"
+        // Transform origin for potential future rotations
+        transform={`rotate(-90 ${radius} ${radius})`} 
       />
       <text
         x="50%"
         y="50%"
         dy=".3em"
         textAnchor="middle"
-        className="text-sm font-semibold text-gray-700"
+        className="text-sm font-bold fill-current text-white" // Make text white and bold
       >
         {percent}%
       </text>
@@ -99,12 +49,16 @@ const CircularProgress = ({ percent }) => {
 
 export default function Skills() {
   return (
-    <section
+    <motion.section // Make the section itself a motion component for initial fade
       id="skills"
-      className="h-screen snap-start flex flex-col items-center justify-center px-6"
+      className="min-h-screen py-20 snap-start flex flex-col items-center justify-center px-6 text-secondary" 
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }} // Trigger animation when 10% of section is in view
+      transition={{ duration: 0.6 }} // Quick fade-in for the entire section
     >
       <motion.h2
-        className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-12"
+        className="text-4xl md:text-5xl font-extrabold text-primary mb-4 text-center"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -113,9 +67,19 @@ export default function Skills() {
         My Expertise
       </motion.h2>
 
+      <motion.p
+        className="text-lg md:text-xl text-secondary mb-12 text-center max-w-2xl"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+      >
+        I focus on mastering fundamental technologies to build robust and scalable solutions. Here’s what drives my work.
+      </motion.p>
+
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl"
-        variants={containerVariants}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl" 
+        variants={skillsContainerVariants} 
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
@@ -123,24 +87,30 @@ export default function Skills() {
         {skillsData.map(({ id, title, icon: Icon, skills }) => (
           <motion.div
             key={id}
-            className="bg-secondary p-8 rounded-3xl shadow-2xl flex flex-col items-center text-center"
-            variants={cardVariants}
+            className="bg-secondary/10 backdrop-blur-xs p-8 rounded-3xl  shadow-2xl flex flex-col items-center text-center  transition-all duration-300" 
+            variants={skillCardVariants} // Use new card variants
+            whileHover={{ scale: 1.03, boxShadow: "0 10px 15px -3px rgba(139, 92, 246, 0.4), 0 4px 6px -2px rgba(139, 92, 246, 0.2)" }} 
           >
-            <Icon className="text-purple-600 text-5xl mb-4" />
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">{title}</h3>
-            <div className="grid grid-cols-2 gap-6">
+            <Icon className="text-primary text-5xl mb-4" />
+            <h3 className="text-2xl font-bold text-secondary mb-6">{title}</h3> {/* Text white */}
+            
+            {/* Inner grid for individual skills */}
+            <div className="grid grid-cols-2 gap-x-4 gap-y-6 w-full"> 
               {skills.map(({ name, percent }) => (
                 <div key={name} className="flex flex-col items-center">
                   <CircularProgress percent={percent} />
-                  <span className="mt-2 text-gray-700 font-medium text-sm">
+                  <motion.span 
+                    variants={skillItemTextVariants} // Animate text after circle
+                    className="mt-2 text-white font-medium text-sm capitalize" // Text white, capitalize
+                  >
                     {name}
-                  </span>
+                  </motion.span>
                 </div>
               ))}
             </div>
           </motion.div>
         ))}
       </motion.div>
-    </section>
+    </motion.section>
   );
 }
