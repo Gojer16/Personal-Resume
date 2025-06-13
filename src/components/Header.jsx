@@ -5,41 +5,8 @@ import { GrGithub } from "react-icons/gr";
 import { TbBrandLinkedinFilled } from "react-icons/tb";
 import { RiTwitterXLine } from "react-icons/ri";
 import { AiFillInstagram } from "react-icons/ai";
+import { headerVariants, childVariants, iconsVariant } from '../utils/variants';
 
-const headerVariants = {
-  hidden: { opacity: 0, y: -30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: 'spring',
-      stiffness: 40,
-      damping: 12,
-      when: 'beforeChildren',
-      staggerChildren: 0.4, 
-    },
-  },
-};
-
-const childVariants = {
-  hidden: { opacity: 0, y: -60 },
-  visible: { opacity: 1, y: 0 },
-};
-
-const iconsVariant = {
-    hidden: { opacity: 0, y: 120 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-        type: 'spring',
-        stiffness: 40,
-        damping: 12,
-        delayChildren: 0.2, 
-        staggerChildren: 0.2, 
-        },
-    },
-}
 
 export default function Header() {
   const [showLoader, setShowLoader] = useState(true);
@@ -132,6 +99,14 @@ export default function Header() {
                     <AiFillInstagram className="hover:text-secondary hover:scale-140 transition-all duration-300 text-3xl"/>
                 </a>
             </motion.div>
+          <motion.p
+            variants={childVariants}
+            className="mt-8 text-1xl text-secondary flex items-center"
+            >
+            Tip: Use
+            <img src="/arrows.svg" alt="Arrow Up/Down" className="inline-block w-5 h-5 mx-1 align-middle" />
+            arrows to browse sections.
+          </motion.p>
         </motion.header>
       )}
     </>
