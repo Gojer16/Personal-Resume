@@ -1,3 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00bfff;
+  --color-secondary: #e6e6fa;
+}
 
 .light-mode, .dark-mode {
   transition: all 0.5s ease-in-out;
@@ -7,6 +13,12 @@
   background-color: #0D1117;
   color: rgb(255, 255, 255);
   transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+@keyframes gradient-x {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
 }
 
 button {
@@ -150,4 +162,33 @@ footer {
   margin: 0px;
   display: flex;
   align-items: center;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.loading-dots {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.loading-dots span {
+  display: inline-block;
+  margin: 0 2px;
+  animation: wave 1.2s infinite ease-in-out both;
+}
+
+.loading-dots span:nth-child(1) { animation-delay: 0s; }
+.loading-dots span:nth-child(2) { animation-delay: 0.2s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes wave {
+  0%, 60%, 100% { transform: translateY(0); }
+  30%          { transform: translateY(-8px); }
 }
