@@ -5,17 +5,21 @@ import Experience from './components/Experience.jsx';
 import Navbar from './components/Navbar.jsx'; 
 import useSectionNavigator from './components/useSectionNavigator';
 import Contact from './components/Contact.jsx';
+import About from './components/About.jsx';
 
 function App() {
-  useSectionNavigator(['home', 'skills', 'experience', 'projects', 'contact']);
+  useSectionNavigator(['home', 'about', 'skills', 'experience', 'projects', 'contact']);
 
   return (
-    <>
+    <>  
       <Navbar />
       <main className="h-screen overflow-y-scroll snap-y snap-mandatory">
         <div className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-[length:200%_200%] animate-[gradient-x_8s_ease_infinite]">
           <section id='home' className='snap-start min-h-screen'>
             <Header />
+          </section>
+          <section id='about' className='snap-start min-h-screen'>
+            <About />
           </section>
           <section id='skills' className='snap-start min-h-screen'>
             <Skills />

@@ -192,3 +192,9 @@ html, body {
   0%, 60%, 100% { transform: translateY(0); }
   30%          { transform: translateY(-8px); }
 }
+
+p {
+  hyphens: auto;
+  overflow-wrap: break-word;
+  margin-block: 1lh;
+}
