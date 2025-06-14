@@ -19,7 +19,7 @@ export default function About() {
       </motion.h2>
         <motion.span
             variants={aboutChildVariants}
-            className="uppercase text-sm tracking-widest text-primary font-semibold mb-4"
+            className="uppercase text-sm tracking-widest text-primary text-center font-semibold mb-4"
         >
         I don't wait for permission. I build it myself.
         </motion.span>
