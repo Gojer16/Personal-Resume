@@ -272,3 +272,13 @@ export const fadeInGrow = {
     transition: { duration: 0.4, ease: "easeOut" }
   }
 };
+
+//Variants for the contact section
+export const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 80, damping: 15 }
+  }
+};
