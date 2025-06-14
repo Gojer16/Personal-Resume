@@ -1,0 +1,38 @@
+export const projectsData = [
+  {
+    id: 'project-1',
+    title: 'Full-Stack School Website',
+    description: 'This project is a robust, secure, and scalable full-stack web app designed specifically designed for a technical school.',
+    technologies: ['React', 'Framer Motion', "TailwindCSS", "FastAPI", "API", "MySQL"],
+    imageUrl: '/firstproject.png', 
+    githubLink: 'https://github.com/Gojer16/PaginaEscuela',
+    liveLink: 'https://pagina-escuela-seven.vercel.app/',
+  },
+  {
+    id: 'project-2',
+    title: 'Personal Portfolio',
+    description: 'A Responsive Personal Portfolio',
+    technologies: ['React', 'Tailwind CSS', 'Framer Motion'],
+    imageUrl: '/secondproject.png', 
+    githubLink: 'https://github.com/Gojer16/Portfolio',
+    liveLink: 'https://portfolio-orlandos-projects-8aa08152.vercel.app/',
+  },
+  {
+    id: 'project-3',
+    title: 'Weather Dashboard',
+    description: 'A weather application that provides current and forecasted weather data for any location. Uses OpenWeatherMap API ',
+    technologies: ['React', 'CSS', 'API'],
+    imageUrl: '/thirdproject.png', 
+    githubLink: 'https://github.com/Gojer16/Weather-Dashboard-with-Geolocation',
+    liveLink: 'https://v0-weather-app-pi-three.vercel.app/',
+  },
+  {
+    id: 'project-4',
+    title: 'Personal Portfolio Website',
+    description: 'Designed and developed a responsive personal portfolio to showcase projects and skills, featuring smooth animations and a modern UI.',
+    technologies: ['React', 'Framer Motion', 'Tailwind CSS'],
+    imageUrl: 'h', 
+    githubLink: 'h',
+    liveLink: 'h',
+  },
+];
