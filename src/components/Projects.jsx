@@ -43,7 +43,7 @@ export default function Projects() {
                 className="absolute bottom-0 left-0 right-0 p-4"
                 variants={fadeInGrow} 
               >
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-2 leading-tight">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-12">
                   {project.title}
                 </h3>
               </motion.div>
@@ -95,7 +95,7 @@ export default function Projects() {
       {projectsData.length > 3 && (
         <motion.a
           href="https://github.com/Gojer16" 
-          className="mt-12 px-6 py-3 bg-purple-600 text-white font-semibold rounded-full shadow-lg hover:bg-purple-700 transition-colors duration-300"
+          className="mt-12 px-6 py-3 bg-purple-600 text-secondary font-semibold rounded-full shadow-lg hover:bg-purple-700 transition-colors duration-300"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}

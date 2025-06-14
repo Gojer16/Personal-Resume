@@ -12,7 +12,7 @@ const CircularProgress = ({ percent }) => {
   return (
     <svg height={radius * 2} width={radius * 2} className="mx-auto">
       <circle
-        stroke="#4B5563" // Darker gray for the background circle
+        stroke="#4B5563"
         fill="transparent"
         strokeWidth={stroke}
         r={normalizedRadius}
@@ -20,7 +20,7 @@ const CircularProgress = ({ percent }) => {
         cy={radius}
       />
       <motion.circle
-        stroke="#8B5CF6" // Your ent color
+        stroke="#8B5CF6" 
         fill="transparent"
         strokeWidth={stroke}
         r={normalizedRadius}
@@ -29,9 +29,8 @@ const CircularProgress = ({ percent }) => {
         strokeDasharray={circumference + ' ' + circumference}
         initial={{ strokeDashoffset: circumference }}
         animate={{ strokeDashoffset }}
-        transition={{ duration: 1.5, ease: 'easeOut' }} // Slightly longer duration for the fill animation
+        transition={{ duration: 1.5, ease: 'easeOut' }} 
         strokeLinecap="round"
-        // Transform origin for potential future rotations
         transform={`rotate(-90 ${radius} ${radius})`} 
       />
       <text
@@ -39,7 +38,7 @@ const CircularProgress = ({ percent }) => {
         y="50%"
         dy=".3em"
         textAnchor="middle"
-        className="text-sm font-bold fill-current text-white" // Make text white and bold
+        className="text-sm font-bold fill-current text-secondary"
       >
         {percent}%
       </text>
@@ -49,13 +48,13 @@ const CircularProgress = ({ percent }) => {
 
 export default function Skills() {
   return (
-    <motion.section // Make the section itself a motion component for initial fade
+    <motion.section 
       id="skills"
       className="min-h-screen py-20 snap-start flex flex-col items-center justify-center px-6 text-secondary" 
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.1 }} // Trigger animation when 10% of section is in view
-      transition={{ duration: 0.6 }} // Quick fade-in for the entire section
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.6 }}
     >
       <motion.h2
         className="text-4xl md:text-5xl font-extrabold text-primary mb-4 text-center"
@@ -88,20 +87,19 @@ export default function Skills() {
           <motion.div
             key={id}
             className="bg-secondary/10 backdrop-blur-xs p-8 rounded-3xl  shadow-2xl flex flex-col items-center text-center  transition-all duration-300" 
-            variants={skillCardVariants} // Use new card variants
+            variants={skillCardVariants}
             whileHover={{ scale: 1.03, boxShadow: "0 10px 15px -3px rgba(139, 92, 246, 0.4), 0 4px 6px -2px rgba(139, 92, 246, 0.2)" }} 
           >
             <Icon className="text-primary text-5xl mb-4" />
-            <h3 className="text-2xl font-bold text-secondary mb-6">{title}</h3> {/* Text white */}
+            <h3 className="text-2xl font-bold text-secondary mb-6">{title}</h3>
             
-            {/* Inner grid for individual skills */}
             <div className="grid grid-cols-2 gap-x-4 gap-y-6 w-full"> 
               {skills.map(({ name, percent }) => (
                 <div key={name} className="flex flex-col items-center">
                   <CircularProgress percent={percent} />
                   <motion.span 
-                    variants={skillItemTextVariants} // Animate text after circle
-                    className="mt-2 text-white font-medium text-sm capitalize" // Text white, capitalize
+                    variants={skillItemTextVariants} 
+                    className="mt-2 text-secondary font-medium text-sm capitalize" 
                   >
                     {name}
                   </motion.span>

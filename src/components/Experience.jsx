@@ -41,13 +41,13 @@ export default function Experience() {
                 className={`flex-1 p-6 md:p-8 rounded-lg border border-purple-700/50 shadow-lg ${isEven ? 'md:mr-8 text-start' : 'md:ml-8 text-start'} bg-secondary/10 backdrop-blur-xs`} 
                 variants={contentBlockVariants} 
               >
-                <h3 className="text-xl md:text-2xl font-bold text-white leading-tight mb-2">
+                <h3 className="text-xl md:text-2xl font-bold text-secondary leading-tight mb-2">
                   {exp.title} at {exp.company}
                 </h3>
                 <p className="text-primary text-base md:text-lg font-medium mb-1">
                   {exp.location}
                 </p>
-                <p className="text-white text-base md:text-lg font-semibold mb-4">
+                <p className="text-secondary text-base md:text-lg font-semibold mb-4">
                   {exp.startDate} - {exp.endDate}
                 </p>
 

@@ -72,7 +72,7 @@ const Navbar = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <a href="#home" className={`text-xl md:text-2xl font-bold ${scrolled ? 'text-white' : 'text-white'}`}>
+        <a href="#home" className={`text-xl md:text-2xl font-bold ${scrolled ? 'text-secondary' : 'text-secondary'}`}>
           Orlando Ascanio
         </a>
       </motion.div>
@@ -104,8 +104,8 @@ const Navbar = () => {
             href={`#${link.id}`}
             className={`text-sm md:text-lg relative px-3 py-1 rounded-full
               ${activeSection === link.id
-                ? (scrolled ? 'text-white font-bold' : 'text-white font-bold')
-                : (scrolled ? 'text-gray-300 hover:text-white' : 'text-white hover:text-gray-200')
+                ? (scrolled ? 'text-secondary font-bold' : 'text-secondary font-bold')
+                : (scrolled ? 'text-gray-300 hover:text-secondary' : 'text-secondary hover:text-gray-200')
               }
               transition-colors duration-200`}
             onClick={() => setActiveSection(link.id)}
@@ -134,8 +134,8 @@ const Navbar = () => {
         href="#contact"
         className={`px-4 py-2 md:px-6 md:py-2 rounded-full font-semibold transition-all duration-300 ease-in-out
           ${scrolled
-            ? 'bg-purple-600 hover:bg-purple-700 text-white shadow-md'
-            : 'bg-white hover:bg-gray-100 text-black shadow-lg'
+            ? 'bg-purple-600 hover:bg-purple-700 text-secondary shadow-md'
+            : 'bg-secondary hover:bg-gray-100 text-black shadow-lg'
           }`}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
