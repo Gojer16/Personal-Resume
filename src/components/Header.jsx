@@ -99,14 +99,6 @@ export default function Header() {
                     <AiFillInstagram className="hover:text-secondary hover:scale-140 transition-all duration-300 text-3xl"/>
                 </a>
             </motion.div>
-          <motion.p
-            variants={childVariants}
-            className="mt-8 text-1xl text-secondary flex items-center"
-            >
-            Tip: Use
-            <img src="/arrows.svg" alt="Arrow Up/Down" className="inline-block w-5 h-5 mx-1 align-middle" />
-            arrows to browse sections.
-          </motion.p>
         </motion.header>
       )}
     </>

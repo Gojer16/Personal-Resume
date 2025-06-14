@@ -3,13 +3,10 @@ import Skills from './components/Skills.jsx';
 import Projects from './components/Projects.jsx';
 import Experience from './components/Experience.jsx';
 import Navbar from './components/Navbar.jsx'; 
-import useSectionNavigator from './components/useSectionNavigator';
 import Contact from './components/Contact.jsx';
 import About from './components/About.jsx';
 
 function App() {
-  useSectionNavigator(['home', 'about', 'skills', 'experience', 'projects', 'contact']);
-
   return (
     <>  
       <Navbar />
