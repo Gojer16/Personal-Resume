@@ -8,7 +8,7 @@ This portfolio is a reflection of my passion for clean design & responsive devel
 
 ## 🚀 Live Demo
 
-Experience it live: **[https://react-basic-resume.vercel.app/]**
+Experience it live: **https://react-basic-resume.vercel.app/**
 
 ## 🛠️ Technologies Used
 
@@ -72,7 +72,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📧 Contact
 
-**[Orlando Ascanio]** - [operation927@gmail..com]
-Project Link: [https://github.com/Gojer16/Personal-Resume]
+**Orlando Ascanio** - operation927@gmail..com
+Project Link: https://github.com/Gojer16/Personal-Resume
 
 ---
