@@ -1,54 +1,109 @@
-import PropTypes from 'prop-types' // in onder to use Proptypes we need to imported, with this line
-import React, { useState } from "react";
+import { motion } from 'framer-motion';
+import { projectsData } from '../utils/projectsData';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { fadeInGrow, sectionVariants, headingVariants, projectCardVariants } from '../utils/variants';
 
+export default function Projects() {
+  const projectsToDisplay = projectsData.slice(0, 3);
 
-// props = properties
-function Projects () {
+  return (
+    <motion.section
+      id="projects" 
+      className="min-h-screen py-20 px-4 md:px-8 text-secondary flex flex-col items-center justify-center relative overflow-hidden"
+      variants={sectionVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+    >
+      <motion.h2
+        className="text-4xl md:text-5xl font-extrabold text-primary mb-12 text-center z-10"
+        variants={headingVariants}
+      >
+        My Projects
+      </motion.h2>
 
-    const [isProject1Visible, setIsProject1Visible] = useState(false);
-    const [isProject2Visible, setIsProject2Visible] = useState(false);
-  
-    const toggleProject1 = () => setIsProject1Visible(!isProject1Visible);
-    const toggleProject2 = () => setIsProject2Visible(!isProject2Visible);
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl"
+      >
+        {projectsToDisplay.map((project) => (
+          <motion.div
+            key={project.id}
+            className="bg-secondary/10 backdrop-blur-xs rounded-lg shadow-xl overflow-hidden transform hover:scale-[1.01] transition-all duration-300"
+            variants={projectCardVariants} 
+            whileHover={{ y: -5 }} 
+          >
+            <div className="relative h-48 md:h-56 overflow-hidden">
+              <img
+                src={project.imageUrl}
+                alt={project.title}
+                className="w-full h-full object-bottom-left"
+              />
+              <div className="absolute inset-0"></div>
+              <motion.div
+                className="absolute bottom-0 left-0 right-0 p-4"
+                variants={fadeInGrow} 
+              >
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2 leading-tight">
+                  {project.title}
+                </h3>
+              </motion.div>
+            </div>
 
+            <div className="p-4 flex flex-col justify-between h-auto">
+              <p className="text-gray-300 text-base mb-4 flex-grow">
+                {project.description}
+              </p>
+              
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.technologies.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="bg-purple-800 text-purple-200 text-xs font-semibold px-2.5 py-0.5 rounded-full"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
 
+              <div className="flex justify-end space-x-4 mt-auto">
+                {project.githubLink && (
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-purple-400 hover:text-purple-300 transition-colors duration-200 flex items-center"
+                  >
+                    <FaGithub className="mr-1" /> GitHub
+                  </a>
+                )}
+                {project.liveLink && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-purple-400 hover:text-purple-300 transition-colors duration-200 flex items-center"
+                  >
+                    <FaExternalLinkAlt className="mr-1" /> Live Demo
+                  </a>
+                )}
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
 
-    return (
-        <>
-        <div className="project">
-        <h2 onClick={toggleProject1}>Project 1: My Cool Project</h2>
-        {isProject1Visible && (
-          <p>This is the detailed description of Project 1.</p>
-        )}
-      </div>
-
-      <div className="project">
-        <h2 onClick={toggleProject2}>Project 2: Another Awesome Project</h2>
-        {isProject2Visible && (
-          <p>This is the detailed description of Project 2.</p>
-        )}
-      </div>
-      
-      </>
-
-    )
+      {projectsData.length > 3 && (
+        <motion.a
+          href="https://github.com/Gojer16" 
+          className="mt-12 px-6 py-3 bg-purple-600 text-white font-semibold rounded-full shadow-lg hover:bg-purple-700 transition-colors duration-300"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+        >
+          View All Projects
+        </motion.a>
+      )}
+    </motion.section>
+  );
 }
-// Projects.prototype going to expect that each "variable" needs to be with the right data type. 
-// NOTHING GOING TO HAPPENDS BUT Its going to output a error in the console
-// number: PropTypes.number = Needs to be a number
-
-Projects.prototype = {
-    desc: PropTypes.string,
-    number: PropTypes.number, 
-    tech: PropTypes.string,
-}
-// if <project /> is in blank, .DefaultProps going to show the next infor
-// number: -
-// desc: 404
-// tech: -.-
-Projects.defaultProps = {
-    number: "-",
-    desc: "404",
-    tech: "-.-"
-}
-export default Projects 
