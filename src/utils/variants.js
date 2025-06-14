@@ -152,3 +152,79 @@ export const skillItemTextVariants = {
     }
   }
 };
+
+
+//Variants for Experience Section
+export const sectionContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.2
+    }
+  }
+};
+
+export const contentBlockVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+      staggerChildren: 0.1, 
+      delayChildren: 0.3 
+    }
+  }
+};
+
+export const bulletVariants = {
+  hidden: { opacity: 0, x: -10 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.3
+    }
+  }
+};
+
+export const timelineContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2 
+    }
+  }
+};
+
+export const timelineItemVariants = {
+  hidden: { opacity: 0, x: -100 }, 
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 80,
+      damping: 15
+    }
+  },
+  right: {
+    x: 100, 
+  }
+};
+
+export const timelineCircleVariants = {
+  hidden: { scale: 0 },
+  visible: {
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 200,
+      damping: 10
+    }
+  }
+};
