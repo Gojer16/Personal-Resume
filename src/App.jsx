@@ -8,7 +8,7 @@ import About from './components/About.jsx';
 
 function App() {
   return (
-    <>  
+    <> 
       <Navbar />
       <main className="h-screen overflow-y-scroll snap-y snap-mandatory sm:snap-none md:snap-y md:snap-mandatory">
         <div className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-[length:200%_200%] animate-[gradient-x_8s_ease_infinite]">
