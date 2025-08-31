@@ -6,7 +6,7 @@ import { TbBrandLinkedinFilled } from "react-icons/tb";
 import { RiTwitterXLine } from "react-icons/ri";
 import { AiFillInstagram } from "react-icons/ai";
 import { headerVariants, childVariants, iconsVariant } from '../utils/variants';
-
+import ChatWidget from './ChatWidget'
 
 export default function Header() {
   const [showLoader, setShowLoader] = useState(true);
@@ -30,6 +30,7 @@ export default function Header() {
   return (
     <>
       <AnimatedLoader isVisible={showLoader} />
+      <ChatWidget />
         {showHeader && (
         <motion.header
             className="flex flex-col items-center justify-center h-screen text-center px-4"
