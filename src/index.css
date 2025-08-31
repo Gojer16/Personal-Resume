@@ -21,24 +21,7 @@
   100% { background-position: 0% 50% }
 }
 
-button {
-  padding: 5px;
-  margin: 2px;
-  background-color: #0D1117;
-  color: rgb(255, 255, 255);
-  border: none;
-  cursor: pointer;
-  border-radius: 5ex;
-}
 
-button:hover {
-  background-color: #e9ebe9;
-}
-
-
-button-theme{
-  transition: color 0.3s ease-in-out;
-}
 
 .dark-mode .button-theme {
   background-color: white;
