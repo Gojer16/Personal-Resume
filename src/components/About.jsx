@@ -36,16 +36,16 @@ export default function About() {
         </motion.div>
         <div className="md:w-2/3 text-lg md:text-xl text-secondary space-y-6 text-center md:text-left">
           <motion.p variants={aboutChildVariants}>
-                I’m Orlando Ascanio, a Backend-Focused Full-Stack Developer from Venezuela, building systems that work as hard as I do. I didn't grow up with privilege, but I learned that mastery, clarity, and grit can outmatch it.
+                I’m Orlando Ascanio, a Backend-Focused Software Engineer from Venezuela, building systems that work as hard as I do. I didn't grow up with privilege, but I learned that mastery, clarity, and grit can outmatch it.
           </motion.p>
           <motion.p variants={aboutChildVariants}>
-                I specialize in scalable backend architectures, API engineering, and database systems. While I understand frontend deeply, I don't chase trends I chase purpose. Every tool I learn serves a reason: to build faster, scale smarter, and solve real problems.
+                I specialize in scalable backend architectures, API design, and database systems. While I understand frontend deeply, I focus on purpose over trends. Every tool I learn serves a reason: to build faster, scale smarter, and solve real-world problems.
           </motion.p>
           <motion.p variants={aboutChildVariants}>
-                I don’t vibe-code. I study the system, break it down, and build until I own it. My process is direct, high-pressure, and driven by the belief that my future and my family’s future depends on the systems I build today.
+                I don’t follow trends or code by intuition alone. I study systems, break them down, and rebuild them until I fully understand and control them. My process is methodical, high-pressure, and driven by the belief that the systems I build today shape my future—and my family’s.
           </motion.p>
           <motion.p variants={aboutChildVariants}>
-                I’m currently open to freelance projects, collaborations, and job opportunities where real engineering matters. If you're building something that solves real problems, <a href="#projects" className="text-primary hover:text-purple-300 font-semibold transition-colors">check out my work</a> or <a href="#contact" className="text-primary hover:text-purple-300 font-semibold transition-colors">reach out</a>. I’m ready.
+                I’m currently open to freelance projects, collaborations, and full-time opportunities where  engineering truly matters. If you're building something that solves real problems, <a href="#projects" className="text-primary hover:text-purple-300 font-semibold transition-colors">check out my work</a> or <a href="#contact" className="text-primary hover:text-purple-300 font-semibold transition-colors">reach out</a>. I’m ready.
           </motion.p>
         </div>
         

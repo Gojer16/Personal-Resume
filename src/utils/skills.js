@@ -1,4 +1,4 @@
-import { FaServer, FaCode, FaTools } from 'react-icons/fa'; // Example icons
+import { FaServer, FaCode, FaTools } from 'react-icons/fa'; 
 
 export const skillsData = [
   {
@@ -6,12 +6,12 @@ export const skillsData = [
     title: 'Backend Development',
     icon: FaServer,
     skills: [
-      { name: 'Node.js', percent: 70 },
-      { name: 'Express.js', percent: 80 },
-      { name: 'REST & GraphQL APIs', percent: 70 },
-      { name: 'SQL & NoSQL (MySQL, MongoDB)', percent: 60 },
-      { name: 'Authentication & Security', percent: 65 },
-      { name: 'Python (FastAPI)', percent: 50 },
+      { name: 'Node.js', percent: 85 },
+      { name: 'Express.js', percent: 85 },
+      { name: 'REST & GraphQL APIs', percent: 80 },
+      { name: 'SQL & NoSQL (MySQL, MongoDB)', percent: 75 },
+      { name: 'Authentication & Security', percent: 75 },
+      { name: 'FastAPI', percent: 60 },
     ],
   },
   {
@@ -19,12 +19,12 @@ export const skillsData = [
     title: 'Frontend Development',
     icon: FaCode,
     skills: [
-      { name: 'React', percent: 70 },
-      { name: 'Next.js', percent: 55 },
-      { name: 'JavaScript', percent: 75 },
-      { name: 'TypeScript', percent: 50 },
-      { name: 'TailwindCSS', percent: 70 },
-      { name: 'Framer Motion', percent: 60 },
+      { name: 'React', percent: 75 },
+      { name: 'Next.js', percent: 65 },
+      { name: 'JavaScript', percent: 80 },
+      { name: 'TypeScript', percent: 65 },
+      { name: 'TailwindCSS', percent: 75 },
+      { name: 'Framer Motion', percent: 65 },
     ],
   },
   {
@@ -32,12 +32,12 @@ export const skillsData = [
     title: 'Tools & Practices',
     icon: FaTools,
     skills: [
-      { name: 'Git & GitHub', percent: 80 },
-      { name: 'Docker', percent: 50 },
-      { name: 'CI/CD', percent: 65 },
-      { name: 'Cloud', percent: 60 },
-      { name: 'Software Architecture & Engineering', percent: 75 },
-      { name: 'Linux & Bash', percent: 60 },
+      { name: 'Git & GitHub', percent: 85 },
+      { name: 'Docker', percent: 65 },
+      { name: 'CI/CD', percent: 70 },
+      { name: 'Cloud', percent: 65 },
+      { name: 'Software Architecture & Engineering', percent: 80 },
+      { name: 'Testing & Debugging', percent: 75 },
     ],
   },
 ];

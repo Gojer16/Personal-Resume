@@ -3,7 +3,7 @@ export const experienceData = [
     id: 'hospital-it-support',
     company: 'Hospital José María Vargas.',
     location: 'Aragua, Cagua',
-    title: 'Intership IT Support',
+    title: 'Internship IT Support',
     startDate: 'Sep 2020',
     endDate: 'Dec 2020',
     description: [
@@ -14,7 +14,7 @@ export const experienceData = [
     id: 'eti-it-support',
     company: 'Escuela Técnica Industrial Mariano Fernández Fortique.',
     location: 'Aragua, Cagua',
-    title: 'Intership IT Support',
+    title: 'Internship IT Support',
     startDate: 'Jul 2023',
     endDate: 'Dec 2023',
     description: [
@@ -22,10 +22,10 @@ export const experienceData = [
     ],
   },
   {
-    id: 'eti-full-stack',
+    id: 'eti-software-engineer',
     company: 'Escuela Técnica Industrial Mariano Fernández Fortique.',
     location: 'Aragua, Cagua',
-    title: 'Intership Full-Stack Developer',
+    title: 'Software Engineer Intern',
     startDate: 'Jan 2025',
     endDate: 'April 2025',
     description: [

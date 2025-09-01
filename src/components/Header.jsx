@@ -56,7 +56,7 @@ export default function Header() {
                 role="contentinfo"
                 aria-label="I am a Backend-Focused Full-Stack Developer"
                 >
-                Backend-Focused Full-Stack Developer.
+                Backend-Focused Software Engineer
             </motion.p>
             <div className='flex gap-8'>
                 <motion.a
