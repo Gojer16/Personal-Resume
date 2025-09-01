@@ -4,7 +4,9 @@
 
 Welcome to my personal online resume! This project is designed to provide an engaging and interactive experience for showcasing my skills, work experience, and projects. Built with modern web technologies, it features smooth full-page snap-scroll navigation for a polished user experience.
 
-This portfolio is a reflection of my passion for clean design & responsive development.
+Recently, I added an AI-powered Resume Q&A Chatbot, giving visitors the ability to ask questions about my background and receive tailored answers instantly. This addition reflects my interest in AI, automation, and building practical, production-ready tools.
+
+This portfolio represents my passion for clean design, robust development, and practical innovation.
 
 ## 🚀 Live Demo
 
@@ -12,9 +14,9 @@ Experience it live: **https://react-basic-resume.vercel.app/**
 
 ## 🛠️ Technologies Used
 
-* **React:**
-* **Tailwind CSS:**
-* **Framer Motion:**
+* **Frontend:** React, Tailwind CSS, Framer Motion.
+* **Backend AI Chatbot:** Flask, Google Gemini API.
+* **Tools & Practices:** REST APIs, Streaming Responses, Rate Limiting, CORS Support.
 
 ## 🌟 Key Features
 
@@ -25,6 +27,7 @@ Experience it live: **https://react-basic-resume.vercel.app/**
 * **Skill Highlight:** A dedicated section to categorize and present my technical proficiencies.
 * **Direct Contact:** Easy access to my contact information and professional social links.
 * **Modern UI/UX:** Clean, dark theme with subtle gradients and animations for an aesthetically pleasing experience.
+* **Resume Q&A Chatbot:** A lightweight, production-ready AI chatbot that answers questions based on my resume.
 
 ## ⚙️ Installation and Setup
 
