@@ -87,16 +87,16 @@ export default function Header() {
                 variants={iconsVariant}
                 className="mt-8 flex gap-8 justify-center"
             >
-                <a href="https://github.com/Gojer16" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-purple-500 transition">
+                <a href="https://orlandoascanio.com/?src=portfolio&project=main" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-purple-500 transition">
                     <GrGithub className="hover:text-secondary  hover:scale-140 transition-all duration-300 text-3xl"/>
                 </a>
-                <a href="https://www.linkedin.com/in/orlando-ascanio-dev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-purple-500 transition">
+                <a href="https://orlandoascanio.com/?src=portfolio&project=linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-purple-500 transition">
                     <TbBrandLinkedinFilled className="hover:text-secondary hover:scale-140 transition-all duration-300 text-3xl"/>
                 </a>
-                <a href="https://x.com/Gojer27" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-purple-500 transition">
+                <a href="https://orlandoascanio.com/?src=portfolio&project=twitter" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-purple-500 transition">
                     <RiTwitterXLine className="hover:text-secondary hover:scale-140 transition-all duration-300 text-3xl"/>
                 </a>
-                <a href="https://www.instagram.com/lilgojer/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-purple-500 transition">
+                <a href="https://orlandoascanio.com/?src=other&project=instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-purple-500 transition">
                     <AiFillInstagram className="hover:text-secondary hover:scale-140 transition-all duration-300 text-3xl"/>
                 </a>
             </motion.div>
