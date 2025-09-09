@@ -57,7 +57,7 @@ export default function Contact() {
 
           <motion.div variants={itemVariants}>
             <a
-              href="https://www.linkedin.com/in/orlando-ascanio-dev" 
+              href="https://orlandoascanio.com/?src=portfolio&project=linkedin" 
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center text-secondary text-lg md:text-xl hover:text-purple-400 transition-colors duration-200"
@@ -69,7 +69,7 @@ export default function Contact() {
 
           <motion.div variants={itemVariants}>
             <a
-              href="https://github.com/Gojer16" 
+              href="https://orlandoascanio.com/?src=portfolio&project=main" 
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center text-secondary text-lg md:text-xl hover:text-purple-400 transition-colors duration-200"
