@@ -73,6 +73,18 @@ export default function Header() {
                 </motion.a>
                 <motion.a
                     variants={childVariants}
+                    href="/CVPersonal.pdf"
+                    target="_blank"
+                    download
+                    rel="noopener noreferrer"
+                    className="mt-6 inline-block bg-purple-600 hover:bg-purple-700 focus:ring-2 focus:ring-purple-500 text-white font-semibold rounded-xl px-8 py-3 shadow-lg hover:shadow-2xl transition-all"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.98 }}
+                    >
+                    Download CV
+                </motion.a>
+                <motion.a
+                    variants={childVariants}
                     href="#projects"
                     className="mt-6 md:mt-6 inline-block border-2 border-secondary  text-secondary hover:bg-primary hover:text-white focus:ring-2 focus:ring-secondary shadow-lg hover:shadow-2xl hover:border-primary font-semibold rounded-xl px-8 py-3 transition-all"
                     whileHover={{ scale: 1.05 }}
