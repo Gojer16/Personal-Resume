@@ -54,7 +54,7 @@ export default function Header() {
                 tabIndex={0}
                 className="mt-6 text-lg md:text-2xl text-secondary"
                 role="contentinfo"
-                aria-label="I am a Backend-Focused Full-Stack Developer"
+                aria-label="I am a Backend-Focused Software Engineer"
                 >
                 Backend-Focused Software Engineer
             </motion.p>

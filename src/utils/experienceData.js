@@ -1,35 +1,16 @@
 export const experienceData = [
   {
-    id: 'hospital-it-support',
-    company: 'Hospital José María Vargas.',
-    location: 'Aragua, Cagua',
-    title: 'Internship IT Support',
-    startDate: 'Sep 2020',
-    endDate: 'Dec 2020',
-    description: [
-      'Developed and executed a comprehensive preventive maintenance plan for hospital computer systems.',
-    ],
-  },
-  {
-    id: 'eti-it-support',
-    company: 'Escuela Técnica Industrial Mariano Fernández Fortique.',
-    location: 'Aragua, Cagua',
-    title: 'Internship IT Support',
-    startDate: 'Jul 2023',
-    endDate: 'Dec 2023',
-    description: [
-      'Managed software/hardware compatibility, implemented preventive maintenance, and upgraded systems for enhanced operational stability.',
-    ],
-  },
-  {
     id: 'eti-software-engineer',
     company: 'Escuela Técnica Industrial Mariano Fernández Fortique.',
     location: 'Aragua, Cagua',
-    title: 'Software Engineer Intern',
+    title: 'Software Engineer',
     startDate: 'Jan 2025',
     endDate: 'April 2025',
     description: [
-      'Built a full-stack institutional website for a Technical school.',
+      'Served as principal software engineer for the school\'s first official website, coordinating with the school\'s CS lead, administrators, and staff to define requirements and deliver a production-ready system for 400+ students and staff.',
+      'Designed and implemented a full-stack web application using modern technologies including React, FastAPI, and MySQL.',
+      'Implemented responsive design principles and performance optimizations to ensure optimal user experience across all devices.',
+      'Collaborated with cross-functional teams to establish development workflows, code review processes, and deployment pipelines.'
     ],
   }
 ];

@@ -73,7 +73,7 @@ export default function Skills() {
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.7, delay: 0.2 }}
       >
-        I focus on mastering fundamental technologies to build robust and scalable solutions. Here’s what drives my work.
+        I focus on mastering fundamental technologies to build robust and scalable software solutions. Here's what drives my engineering work.
       </motion.p>
 
       <motion.div
